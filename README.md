@@ -42,7 +42,7 @@ sudo apt install libmumps64-scotch-dev
 ```
 
 2. 创建一个自己文件夹命名为自己的名字拼音全拼，如：zhangsan.
-3. 把 example 中的所有文件复制到自己的文件夹中。
+3. 把仓库中的 test, include 文件夹，CMakeLists.txt 文件复制到自己的文件夹中。
 4. 编译自己文件夹的代码
 ```bash
 mkdir build
