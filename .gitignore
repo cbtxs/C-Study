@@ -1,0 +1,5 @@
+*~
+build
+.ycm_extra_conf.py
+thirdparty
+__pycache__
