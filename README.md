@@ -3,23 +3,34 @@
 
 ## 作业内容
 1. 安装 VTK, Eigen, MFEM, Gmsh, Mumps
+(1) 安装依赖
+```bash
+sudo apt install libgmp-dev libmpfr-dev libboost-dev
+sudo apt install zlib1g-dev libblas-dev liblapack-dev
+sudo apt install libglu1-mesa-dev freeglut3-dev mesa-common-dev
+sudo apt install libopenblas-dev
+sudo apt install libopenmpi-dev
+sudo apt install libparmetis-dev libmetis-dev
+sudo apt install libscalapack-openmpi-dev
+```
 
-（1）Eigen
+(2) Eigen
 ```bash
 sudo apt install libopenblas-dev
 sudo apt install libeigen3-dev
 ```
-（2）MFEM
+
+(3)MFEM
 ```bash
 git clone git@github.com:weihuayi/mfem.git
 cd mfem
 mkdir build 
 cd build
-cmake -D CMAKE_BUILD_TYPE:STRING=Release -D CMAKE_INSTALL_PREFIX=~/.local/mfem -DMFEM_USE_GSLIB=ON -DGSLIB_DIR=~/.local/gslib ..
+cmake -D CMAKE_BUILD_TYPE:STRING=Release -D CMAKE_INSTALL_PREFIX=~/.local/mfem 
 make -j 8
 make install
 ```
-（3）CGAL https://github.com/CGAL/cgal/archive/refs/tags/v5.6.1.tar.gz
+(4) CGAL https://github.com/CGAL/cgal/archive/refs/tags/v5.6.1.tar.gz
 解压下载的文件，进入文件夹，在该文件夹下打开终端，输入以下命令：
 ```bash
 mkdir build
@@ -27,7 +38,7 @@ cd build
 cmake -D CMAKE_BUILD_TYPE:STRING=Release -D CMAKE_INSTALL_PREFIX=~/.local/cgal ..
 make install
 ```
-（4）VTK https://vtk.org/download/#latest
+(5) VTK https://vtk.org/download/#latest
 解压下载的文件，进入文件夹，在该文件夹下打开终端，输入以下命令：
 ```bash
 mkdir build
@@ -36,7 +47,7 @@ cmake -D CMAKE_INSTALL_PREFIX=~/.local/vtk ..
 make -j8
 make install
 ```
-（5） MUMPS
+(6) MUMPS
 ```bash
 sudo apt install libmumps64-scotch-dev
 ```
