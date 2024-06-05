@@ -26,7 +26,7 @@ git clone git@github.com:weihuayi/mfem.git
 cd mfem
 mkdir build 
 cd build
-cmake -D CMAKE_BUILD_TYPE:STRING=Release -D CMAKE_INSTALL_PREFIX=~/.local/mfem 
+cmake -D CMAKE_BUILD_TYPE:STRING=Release -D CMAKE_INSTALL_PREFIX=~/.local/mfem ..
 make -j 8
 make install
 ```
